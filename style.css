@@ -45,5 +45,18 @@ img{
 
 .superinfo a{ 
     color: white;
-
 } 
+
+/*menu*/
+.menu-bg{ 
+    background: #2c70ff;
+}
+
+.menu { 
+    max-width: 960px;
+    margin: 0;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
