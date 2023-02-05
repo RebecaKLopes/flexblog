@@ -1,8 +1,11 @@
+/* reset para tags*/
 body, h1, h2, p, ul, li, a{ 
     margin: 0px;
     padding: 0px;
 } 
 
+
+/* reset geral*/
 *{ 
     box-sizing: border-box;
 } 
@@ -12,6 +15,8 @@ body{
     color: #222222;
 } 
 
+
+/* header*/
 ul{ 
    list-style: none;
 } 
@@ -87,6 +92,7 @@ img{
     padding: 10px;
 }
 
+/*corpo sobre*/
 .introducao{ 
     font-size: 3em;
     line-height: 1;
@@ -125,4 +131,183 @@ img{
 .sobre-img{ 
     flex: 1 1 160px;
     margin: 0 10px;
+}
+
+/*corpo produtos*/
+.produtos{
+    max-width: 960px;
+    margin: 60px auto;
+}
+
+.produtos h1{
+    font-size: 3em;
+    margin: 0 10px 60px 10px ;
+}
+
+.produtos-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.produtos-item{
+    flex: 1 1 175px;
+    margin: 10px;
+}
+
+.produtos-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    background: #f7f7f7;
+    padding: 60px 20px;
+}
+
+.purple{
+    border-top: 8px solid #ae81ff;
+}
+
+.pink{
+    border-top: 8px solid #f9265e;
+}
+
+.blue{
+    border-top: 8px solid #66d9eb;
+}
+
+/*corpo preços*/
+.preco{
+    background: #f7f7f7;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.preco-item{
+    flex: 1 1 260px;
+    border: 4px solid white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.preco-item h2{
+    font-size: 3em;
+    color: #a4a4a4;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.preco-item span{
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+    font-size: 3em;
+    text-align: center;
+    font-weight: bold;
+    padding: 10 0 5px 0;
+    border-top: 4px solid white;
+}
+
+.preco-item sup{
+    font-size: 1.5rem;
+}
+
+.preco-item ul{
+    max-width: 300px;
+    margin: 20px auto;
+    font-size: 1.25em;
+    font-style: italic;
+    color: #7c7c7c;
+}
+
+.preco-item li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.preco-item li::after{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: #E6A4A5;
+    border-radius: 50%;
+}
+
+.preco-item a{
+    max-width: 300px;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid ;
+    color: #222222;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2.25em;
+    padding: 15px 0;
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .preco{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /*altera a ordem do card de preço no mobile*/
+    .preco .preco-item:nth-child(3){
+        order: -2;
+    }
+
+    .preco .preco-item:nth-child(2){
+        order: -1;
+    }
+}
+
+/*corpo qualidade*/
+
+.qualidade{
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item{
+    flex: 1 1 300px;
+    margin: 20px 10px;
+}
+
+.qualidade-item h2{
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+    background: #E6A4A5;
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before{
+    background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before{
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before{
+    background: #66d9eb;
+}
+
+.qualidade-item p{
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: #7c7c7c;
 }
